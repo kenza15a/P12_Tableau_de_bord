@@ -1,0 +1,35 @@
+.main-container {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.charts {
+    width: 100%;
+    height: 100vh;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.widgets {
+    margin-left: 5rem;
+
+}
+
+.redchart {
+    background-color: red;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+}
+
+.charts-groupe {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+}
