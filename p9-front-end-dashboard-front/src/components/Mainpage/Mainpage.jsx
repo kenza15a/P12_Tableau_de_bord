@@ -6,30 +6,13 @@ import calIcon from "../Widget/icons/calories-icon.png";
 import protIcon from "../Widget/icons/protein-icon.png";
 import glucIcon from "../Widget/icons/carbs-icon.png";
 import lipidIcon from "../Widget/icons/fat-icon.png";
-import {
-  CartesianGrid,
-  Legend,
-  Line,
-  LineChart,
-  Tooltip,
-  XAxis,
-  YAxis,
-  BarChart,
-  Bar,
-  ResponsiveContainer,
-} from "recharts";
+
+import Radarchartexp from "../RadarChart/Radarchartexp";
+import Piechartexp from "../Piechartexp/Piechartexp";
+import Linechartexp from "../Linechartexp/Linechartexp";
+import Barchartexp from "../Barchartexp/Barchartexp";
 function Mainpage() {
-  // Sample chart data
   const data1 = [
-    { day: "L", duration: 70 },
-    { day: "M", duration: 50 },
-    { day: "M", duration: 60 },
-    { day: "J", duration: 40 },
-    { day: "V", duration: 80 },
-    { day: "S", duration: 30 },
-    { day: "D", duration: 110 },
-  ];
-  const data = [
     {
       name: "Page A",
       uv: 4000,
@@ -73,6 +56,8 @@ function Mainpage() {
       amt: 2100,
     },
   ];
+
+ 
   return (
     <>
       <div className="main-container">
@@ -81,70 +66,11 @@ function Mainpage() {
         </div>
         <div className="page-content">
           <div className="charts">
-            <BarChart width={700} height={250} data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-
-              <Bar dataKey="pv" fill="#black" />
-              <Bar dataKey="uv" fill="#E60000" />
-            </BarChart>
-
+            <Barchartexp data={data1} />
             <div className="charts-groupe">
-              <LineChart
-                className="redchart"
-                width={200}
-                height={200}
-                data={data1}
-              >
-                <Line
-                  type="monotone"
-                  dataKey="duration"
-                  stroke="white"
-                  strokeWidth={2}
-                />
-                <XAxis
-                  tick={{ fontFamily: "sans-serif" }}
-                  dataKey="day"
-                  strokeOpacity={0}
-                ></XAxis>
-                <Tooltip />
-              </LineChart>
-              <LineChart
-                className="redchart"
-                width={200}
-                height={200}
-                data={data1}
-              >
-                <Line
-                  type="monotone"
-                  dataKey="duration"
-                  stroke="white"
-                  strokeWidth={2}
-                />
-                <XAxis
-                  dataKey="day"
-                  strokeOpacity={0}
-                  margin={{ right: 30, left: 20 }}
-                ></XAxis>
-                <Tooltip />
-              </LineChart>
-              <LineChart
-                className="redchart"
-                width={200}
-                height={200}
-                data={data1}
-              >
-                <Line
-                  type="monotone"
-                  dataKey="duration"
-                  stroke="white"
-                  strokeWidth={2}
-                />
-                <XAxis dataKey="day" strokeOpacity={0}></XAxis>
-                <Tooltip />
-              </LineChart>
+              <Linechartexp />
+              <Radarchartexp />
+              <Piechartexp  />
             </div>
           </div>
           <div className="widgets">

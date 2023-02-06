@@ -1,6 +1,7 @@
 import React from "react";
 import "./widget.css";
 import calIcon from "./icons/calories-icon.png";
+import PropTypes from "prop-types";
 function Widget({ icon, grammage, unit }) {
   return (
     <>
@@ -22,5 +23,9 @@ Widget.defaultProps = {
   grammage: "150",
   unit: "calories",
 };
-
+Widget.propTypes = {
+  icon: PropTypes.string,
+  grammage: PropTypes.string,
+  unit: PropTypes.string,
+};
 export default Widget;

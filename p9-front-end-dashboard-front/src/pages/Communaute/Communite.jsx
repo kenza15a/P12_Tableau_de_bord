@@ -5,12 +5,13 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 function Communite() {
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <Sidebar />
-        
-        <h1>Communauté</h1>
-      </div>
+      <>
+        <Navbar />
+        <div className="container">
+          <Sidebar />
+          <h1>Communauté page</h1>
+        </div>
+      </>
     </>
   );
 }

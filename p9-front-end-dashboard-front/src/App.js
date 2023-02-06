@@ -4,6 +4,7 @@ import Profile from "./pages/Profile/Profile";
 import Reglage from "./pages/Reglage/Reglage";
 import Communite from "./pages/Communaute/Communite";
 import "./App.css"
+import Notfound from "./pages/NotFound/Notfound";
 function App() {
 
 
@@ -21,6 +22,9 @@ function App() {
       break
     case "/Communauté":
       Component = <Communite />
+      break
+    case "/*":
+      Component = <Notfound />
       break
     default: Component = <Accueil />
       break

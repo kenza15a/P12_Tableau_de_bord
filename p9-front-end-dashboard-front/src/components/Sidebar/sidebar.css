@@ -1,56 +1,20 @@
 .vertical {
-    width: 6VW;
-    height: 100vh;
-    background-color: black;
+    width: 6.5VW;
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
 
 }
 
-.vertical ul {
+.icon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     list-style: none;
-    color: white;
-    font-size: 1rem;
-    margin-top: 6vh;
-}
-
-.copywrite-section {
-    height: 20%;
-}
-
-/*@media (min-width:768px) {
-   
-}*/
-/*  ----------- */
-@media only screen and (min-width : 680px) {
-    .vertical {
-        width: 4vw;
-        padding-right: 2rem;
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        justify-items: flex-start;
-        height: 100%;
-
-
-    }
-
-    .vertical ul {
-        list-style: none;
-        color: white;
-        font-size: 1rem;
-
-        height: 70%;
-
-    }
-
-    .copywrite-section {
-        height: 30%;
-        position: fixed;
-        margin-top: -2Opx;
-    }
+    margin-top: 12rem;
+    padding: 0.8rem;
 
 }
+
+.copywrite-section {}
